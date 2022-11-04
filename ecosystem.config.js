@@ -18,7 +18,7 @@ module.exports = {
                 PORT: 8090,
                 NODE_ENV: 'production',
                 DROP_CONSOLE: true,
-                ORIGIN: 'http://reflex.financialiq.co.kr'
+                ORIGIN: 'http://reflex-test.financialiq.co.kr'
             },
             env_development: {
                 HOST: '0.0.0.0',
