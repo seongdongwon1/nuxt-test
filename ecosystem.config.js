@@ -34,7 +34,7 @@
 module.exports = {
     apps: [
         {
-            name: '123',
+            name: 'reflex-front',
             exec_mode: 'cluster',
             instances: '2', // Or a number of instances
             script: './node_modules/nuxt/bin/nuxt.js',
@@ -43,12 +43,20 @@ module.exports = {
             watch: false,
             max_memory_restart: '1G',
             env: {
-                PORT: 3000,
-                NODE_ENV: 'development'
-            },
-            env_production: {
-                PORT: 8090,
-                NODE_ENV: 'production'
+                PORT: 8090
+            }
+        },
+        {
+            name: 'reflex-front-dev',
+            exec_mode: 'cluster',
+            instances: '2', // Or a number of instances
+            script: './node_modules/nuxt/bin/nuxt.js',
+            args: 'start',
+            autorestart: true,
+            watch: false,
+            max_memory_restart: '1G',
+            env: {
+                PORT: 3000
             }
         }
     ]
